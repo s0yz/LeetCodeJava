@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 
 /**
- * In a array A of size 2N, there are N+1 unique elements, and exactly one of
+ * In a array A of size 2N, there are N+1 <b>unique</b> elements, and exactly one of
  * these elements is repeated N times.
  * <p>
  * Return the element repeated N times.
@@ -66,7 +66,7 @@ public class ReapeatedNTimes {
 	}
 
 	/**
-	 * HashSet Read the statetement ! They are all unique except the one !
+	 * HashSet
 	 * 
 	 * Runtime: 0 ms, faster than 100.00%
 	 * <p>
