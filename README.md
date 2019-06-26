@@ -1,2 +1,2 @@
 # LeetCodeJava
-Java LeetCode solutions
+Java [LeetCode](https://leetcode.com) solutions
