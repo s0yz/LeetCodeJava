@@ -1,8 +1,5 @@
 package medium;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Implement atoi which converts a string to an integer.
  * <p>
@@ -42,7 +39,7 @@ public class MyAtoi {
 	 * 
 	 * Runtime: 2 ms, faster than 60.16%
 	 * <p>
-	 * Memory Usage: 35.9 MB, less than 99.92%
+	 * Memory Usage: 36.3 MB, less than 99.91%
 	 */
 	public static int v1(String str) {
 		boolean started = false;
