@@ -1,16 +1,19 @@
 package main;
 
 import easy.ContainsNearbyDuplicate;
+import easy.IsAlienSorted;
 import easy.ReapeatedNTimes;
 
 public class Main {
 
 	public static void main(String[] args) {
-		
+		String[] words = {"app","app","app"};
+		String order = "abcdefghijklmnopqrstuvwxyz";
+		printResult(1, IsAlienSorted.v1(words, order), true);
 	}
 
 	public static void printResult(int version, Object r, Object e) {
-		System.out.println("Version " + version + " actual: " + r + ", expected: " + e);
+		System.out.println("Version " + version + ", actual: " + r + ", expected: " + e);
 	}
 
 	public static void containsNearbyDuplicate() {
