@@ -1,8 +1,7 @@
-package algorithm;
+package easy;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 
 /**
  * Given an array of integers and an integer k, find out whether there are two
@@ -16,8 +15,8 @@ public class ContainsNearbyDuplicate {
 
 	/**
 	 * Naive implementation
-	 * <p>
-	 * Time Limit Exceeded
+	 * 
+	 * Time Limit Exceeded lol
 	 */
 	public static boolean v1(int[] nums, int k) {
 		for (int i = 0; i < nums.length - 1; ++i) {
@@ -32,8 +31,10 @@ public class ContainsNearbyDuplicate {
 
 	/**
 	 * HashMap
+	 * 
+	 * Runtime: 8 ms, faster than 79.41%
 	 * <p>
-	 * Runtime: 8 ms, faster than 79.41% Memory Usage: 43.2 MB, less than 64.27%
+	 * Memory Usage: 43.2 MB, less than 64.27%
 	 */
 	public static boolean v2(int[] nums, int k) {
 		HashMap<Integer, Integer> indices = new HashMap<>();
@@ -45,20 +46,25 @@ public class ContainsNearbyDuplicate {
 		}
 		return false;
 	}
-	
+
 	/**
-	 * Divide to conquer
+	 * HashSet
+	 * 
+	 * Runtime: 6 ms, faster than 97.48%
 	 * <p>
+	 * Memory Usage: 42.6 MB, less than 76.08%
 	 * 
 	 */
 	public static boolean v3(int[] nums, int k) {
-		HashSet<Integer> hs = new HashSet<>();
-        for(int i=0; i < nums.length; i++){
-            if(!hs.add(nums[i]))
-                return true;
-            if(i - k >= 0)
-                hs.remove(nums[i-k]);
-        }
-        return false;
+		HashSet<Integer> checked = new HashSet<>();
+		for (int i = 0; i < nums.length; i++) {
+			if (!checked.add(nums[i])) {
+				return true;
+			}
+			if (i - k >= 0) {
+				checked.remove(nums[i - k]);
+			}
+		}
+		return false;
 	}
 }
